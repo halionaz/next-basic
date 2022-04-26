@@ -1,3 +1,11 @@
+import Navibar from "../components/Navibar";
+
 export default function Home() {
-    return "Hi";
+    return (
+        <div>
+            <Navibar>
+            </Navibar>
+            <h1>Home</h1>
+        </div>
+    )
 }

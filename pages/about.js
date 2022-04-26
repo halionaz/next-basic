@@ -1,3 +1,10 @@
+import Navibar from "../components/Navibar"
+
 export default () => {
-    return "우리에 대해서 궁금하신가요?";
+    return (
+        <div>
+            <Navibar></Navibar>
+            <h1>About</h1>
+        </div>
+    );
 }
