@@ -1,25 +1,27 @@
-import Link from "next/link"
-import { useRouter } from "next/router"
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-export default function Navibar(){
+export default function Navibar() {
     const router = useRouter();
-    console.log(router)
+    console.log(router);
     return (
         <nav>
             <Link href="/">
                 <a className={router.pathname === "/" ? "active" : ""}>Home</a>
             </Link>
             <Link href="/about">
-                <a className={ router.pathname === "/about" ? "active" : ""}>About</a>
+                <a className={router.pathname === "/about" ? "active" : ""}>
+                    About
+                </a>
             </Link>
             <style jsx>{`
                 a {
                     text-decoration: none;
                 }
                 .active {
-                    color : tomato;
+                    color: crimson;
                 }
             `}</style>
         </nav>
-    )
+    );
 }
