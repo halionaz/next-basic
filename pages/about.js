@@ -6,6 +6,7 @@ export default () => {
         <div>
             <Seo title="About" />
             <h1>About</h1>
+            <a href="https://naver.com" target="_blank">Something</a>
         </div>
     );
 };
