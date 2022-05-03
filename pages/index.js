@@ -37,6 +37,9 @@ export default function Home({ results }) {
                 .movie:hover img {
                     transform: scale(1.05) translateY(-10px);
                 }
+                .movie{
+                    cursor : pointer;
+                }
                 .movie h4 {
                     font-size: 18px;
                     text-align: center;
