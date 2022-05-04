@@ -11,7 +11,6 @@ export default function Detail() {
 
     useEffect(() => {
         (async () => {
-            console.log(router.query.id);
             const result = await (
                 await fetch(`/api/movies/${router.query.id}`)
             ).json();
@@ -20,6 +19,7 @@ export default function Detail() {
     }, []);
 
     return <div>
+        <h4>{router.query.title}</h4>
         {detail}
     </div>;
 }
