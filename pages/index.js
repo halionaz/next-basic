@@ -12,20 +12,30 @@ export default function Home({ results }) {
     //       setMovies(results);
     //     })();
     //   }, []);
-    const onClick = (id, title) => {
-        router.push({
-            pathname : `/movies/${id}`,
-            query : {
-                title
-            }
-        }, `movies/${id}`)
+    const onClick = (id, title, poster_path) => {
+        router.push(
+            {
+                pathname: `/movies/${id}`,
+                query: {
+                    title,
+                    img: `https://image.tmdb.org/t/p/w500/${poster_path}`,
+                },
+            },
+            `movies/${id}`
+        );
     };
     return (
         <div className="container">
             <Seo title="Home" />
             {/* {!movies && <h4>Loading...</h4>} */}
             {results?.map((movie) => (
-                <div className="movie" key={movie.id} onClick={() => { onClick(movie.id, movie.title)}}>
+                <div
+                    className="movie"
+                    key={movie.id}
+                    onClick={() => {
+                        onClick(movie.id, movie.title, movie.poster_path);
+                    }}
+                >
                     <img
                         src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                     />

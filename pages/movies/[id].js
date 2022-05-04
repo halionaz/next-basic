@@ -18,8 +18,11 @@ export default function Detail() {
         })();
     }, []);
 
-    return <div>
-        <h4>{router.query.title}</h4>
-        {detail}
-    </div>;
+    return (
+        <div>
+            <h4>{router.query.title}</h4>
+            <img src={router.query.img}></img>
+            {detail}
+        </div>
+    );
 }
